@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard WebTools</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+</head>
+<body class="bg-light">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-0">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">WebTools</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="/dashboard">Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/remove-bg">Hapus Background</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/pdf-to-word">PDF ke Word</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/scan-to-pdf">Scan ke PDF</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/filter-jadwal">Filter Jadwal</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-warning" href="/logout">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Judul & Deskripsi Webtools -->
+  <div class="container py-4">
+    <div class="text-center mb-4">
+      <h1 class="fw-bold mb-2">WebTools</h1>
+      <p class="lead mb-0">Kumpulan alat online gratis untuk membantu pekerjaan digital Anda, mulai dari pengolahan gambar hingga konversi dokumen.</p>
+    </div>
+
+    <!-- Menu Card -->
+    <div class="row justify-content-center g-4">
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100 dashboard-card">
+          <div class="card-body text-center">
+            <i class="bi bi-image fs-1 text-primary mb-2"></i>
+            <h5 class="card-title mt-2 mb-1">Hapus Background</h5>
+            <p class="card-text small mb-3">Hilangkan background dari gambar Anda secara otomatis dan cepat.</p>
+            <a href="/remove-bg" class="btn btn-primary btn-sm">Mulai</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100 dashboard-card">
+          <div class="card-body text-center">
+            <i class="bi bi-file-earmark-word fs-1 text-success mb-2"></i>
+            <h5 class="card-title mt-2 mb-1">PDF ke Word</h5>
+            <p class="card-text small mb-3">Konversi file PDF ke Word dengan mudah dan gratis.</p>
+            <a href="/pdf-to-word" class="btn btn-primary btn-sm">Mulai</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100 dashboard-card">
+          <div class="card-body text-center">
+            <i class="bi bi-scissors fs-1 text-danger mb-2"></i>
+            <h5 class="card-title mt-2 mb-1">Scan ke PDF</h5>
+            <p class="card-text small mb-3">Upload beberapa gambar, atur filter, dan gabungkan menjadi satu file PDF.</p>
+            <a href="/scan-to-pdf" class="btn btn-primary btn-sm">Mulai</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+  <div class="card shadow-sm h-100 dashboard-card">
+    <div class="card-body text-center">
+      <i class="bi bi-file-earmark-excel fs-1 text-success mb-2"></i>
+      <h5 class="card-title mt-2 mb-1">PDF ke Excel</h5>
+      <p class="card-text small mb-3">Ekstrak tabel dari PDF dan simpan sebagai Excel (.xlsx).</p>
+      <a href="/pdf-to-excel" class="btn btn-primary btn-sm">Mulai</a>
+    </div>
+  </div>
+</div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
